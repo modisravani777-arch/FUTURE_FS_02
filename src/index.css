@@ -1,13 +1,29 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Search bar */
+.search-input {
+  @apply p-2 border border-gray-300 rounded w-full sm:w-64 focus:outline-none focus:ring-2 focus:ring-purple-600 dark:bg-gray-700 dark:border-gray-600 dark:text-white;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Buttons */
+.btn {
+  @apply px-4 py-2 rounded font-semibold text-white transition duration-200;
 }
+.btn-primary { @apply bg-purple-600 hover:bg-purple-700 dark:bg-purple-700 dark:hover:bg-purple-800; }
+.btn-secondary { @apply bg-green-600 hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-800; }
+.btn-danger { @apply bg-red-600 hover:bg-red-700 dark:bg-red-700 dark:hover:bg-red-800; }
+
+/* Product card hover */
+.product-card:hover {
+  @apply scale-105 shadow-2xl transition-all duration-300;
+}
+
+/* Product backgrounds */
+.product-bg-1 { @apply bg-purple-50 dark:bg-gray-800; }
+.product-bg-2 { @apply bg-blue-50 dark:bg-gray-800; }
+.product-bg-3 { @apply bg-green-50 dark:bg-gray-800; }
+.product-bg-4 { @apply bg-yellow-50 dark:bg-gray-800; }
+.product-bg-5 { @apply bg-pink-50 dark:bg-gray-800; }
+.product-bg-6 { @apply bg-orange-50 dark:bg-gray-800; }
